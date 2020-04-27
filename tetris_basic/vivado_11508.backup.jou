@@ -1,0 +1,194 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Jul 25 08:36:39 2019
+# Process ID: 11508
+# Current directory: C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7416 C:\Users\Pinju\Desktop\tetris_projec_3.0\tetris_basic\project_tetris_test.xpr
+# Log file: C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/vivado.log
+# Journal file: C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+startgroup
+set_property package_pin "" [get_ports [list  {seg[7]}]]
+place_ports {seg[0]} D5
+endgroup
+place_ports {seg[7]} B4
+startgroup
+set_property package_pin "" [get_ports [list  {seg[6]}]]
+place_ports {seg[1]} B2
+endgroup
+place_ports {seg[6]} A4
+startgroup
+set_property package_pin "" [get_ports [list  {seg[2]}]]
+place_ports {seg[5]} A3
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {seg[3]}]]
+place_ports {seg[4]} B1
+endgroup
+place_ports {seg[3]} A1
+place_ports {seg[2]} B3
+place_ports {rgb[11]} B7
+place_ports {rgb[10]} C5
+place_ports {rgb[9]} C6
+place_ports {rgb[8]} F5
+startgroup
+set_property package_pin "" [get_ports [list  {rgb[3]}]]
+place_ports {rgb[7]} D8
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {rgb[2]}]]
+place_ports {rgb[6]} A5
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {rgb[1]}]]
+place_ports {rgb[5]} A6
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {rgb[0]}]]
+place_ports {rgb[4]} B6
+endgroup
+place_ports {rgb[3]} E7
+place_ports {rgb[2]} E5
+place_ports {rgb[1]} E6
+place_ports {rgb[0]} C7
+set_property IOSTANDARD LVCMOS33 [get_ports [list {rgb[11]} {rgb[10]} {rgb[9]} {rgb[8]} {rgb[7]} {rgb[6]} {rgb[5]} {rgb[4]} {rgb[3]} {rgb[2]} {rgb[1]} {rgb[0]}]]
+startgroup
+set_property package_pin "" [get_ports [list  btn_rotate]]
+place_ports btn_drop R15
+endgroup
+place_ports btn_rotate U4
+save_constraints
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+disconnect_hw_server localhost:3121
+connect_hw_server
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_hw
+connect_hw_server
+open_hw_target
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Pinju/Desktop/tetris_projec_3.0/tetris_basic/project_tetris_test.runs/impl_1/tetris.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw

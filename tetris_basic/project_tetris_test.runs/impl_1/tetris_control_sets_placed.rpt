@@ -1,0 +1,116 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Jul 25 11:25:56 2019
+| Host         : DESKTOP-I5LTPVM running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file tetris_control_sets_placed.rpt
+| Design       : tetris
+| Device       : xa7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    41 |
+| Unused register locations in slices containing registers |   166 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            8 |
+|      2 |            3 |
+|      4 |            6 |
+|      5 |            2 |
+|      8 |            1 |
+|      9 |            1 |
+|     10 |            3 |
+|     11 |            2 |
+|     12 |            1 |
+|     14 |            2 |
+|     15 |            8 |
+|    16+ |            4 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             291 |          242 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             185 |           61 |
+| Yes          | No                    | No                     |              45 |           19 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              89 |           39 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------+----------------------------------------------+---------------------------------------------------+------------------+----------------+
+|           Clock Signal          |                 Enable Signal                |                  Set/Reset Signal                 | Slice Load Count | Bel Load Count |
++---------------------------------+----------------------------------------------+---------------------------------------------------+------------------+----------------+
+|  clk_BUFG                       | debouncer_sw_rst_/counter[15]_i_1__6_n_0     |                                                   |                1 |              1 |
+|  clk_BUFG                       | debouncer_sw_pause_/counter[15]_i_1__5_n_0   |                                                   |                1 |              1 |
+|  clk_BUFG                       | debouncer_btn_left_/counter[15]_i_1__2_n_0   |                                                   |                1 |              1 |
+|  clk_BUFG                       | debouncer_btn_drop_/counter[15]_i_1__0_n_0   |                                                   |                1 |              1 |
+|  clk_BUFG                       | debouncer_btn_down_/counter[15]_i_1__4_n_0   |                                                   |                1 |              1 |
+|  clk_BUFG                       | debouncer_btn_right_/counter[15]_i_1__3_n_0  |                                                   |                1 |              1 |
+|  clk_BUFG                       |                                              | randomizer_/random0_n_0                           |                1 |              1 |
+|  clk_BUFG                       | debouncer_btn_rotate_/counter[15]_i_1__1_n_0 |                                                   |                1 |              1 |
+|  score_display_/seg_clk_reg_n_0 |                                              | score_display_/p_0_in[0]                          |                1 |              2 |
+|  score_display_/seg_clk_reg_n_0 |                                              | score_display_/sel0[4]                            |                1 |              2 |
+|  clk_BUFG                       | display_/counter_x[9]_i_1_n_0                |                                                   |                1 |              2 |
+|  clk_too_fast_IBUF              |                                              |                                                   |                3 |              4 |
+|  clk_BUFG                       | debouncer_sw_pause_/mode_reg[2]_116[0]       | debouncer_sw_rst_/drop_timer0                     |                2 |              4 |
+|  clk_BUFG                       | debouncer_sw_pause_/mode_reg[2]_117[0]       | debouncer_sw_rst_/drop_timer0                     |                2 |              4 |
+|  clk_BUFG                       | debouncer_sw_pause_/mode_reg[2]_119[0]       | debouncer_sw_rst_/drop_timer0                     |                3 |              4 |
+|  clk_BUFG                       | debouncer_sw_pause_/mode_reg[2]_118[0]       | debouncer_sw_rst_/drop_timer0                     |                3 |              4 |
+|  clk_BUFG                       | debouncer_sw_pause_/E[0]                     | debouncer_sw_rst_/drop_timer0                     |                3 |              4 |
+|  clk_BUFG                       | game_clock_/mode_reg[1]                      |                                                   |                1 |              5 |
+|  clk_BUFG                       | debouncer_sw_rst_/E[0]                       | debouncer_sw_rst_/drop_timer0                     |                3 |              5 |
+|  clk_BUFG                       | display_/counter_x[9]_i_1_n_0                | display_/counter_y                                |                5 |              8 |
+|  score_display_/seg_clk_reg_n_0 |                                              |                                                   |                5 |              9 |
+|  USED_CLK                       | diaplay_pictureso/ena_over_reg_n_0           |                                                   |                3 |             10 |
+|  USED_CLK                       | diaplay_pictureso/ena_start_reg_n_0          |                                                   |                3 |             10 |
+|  USED_CLK                       | diaplay_pictureso/vga_driver_u0/y_cnt        | diaplay_pictureso/vga_driver_u0/y_cnt[9]_i_1_n_0  |                4 |             10 |
+|  clk_BUFG                       | debouncer_sw_pause_/shifting_row             |                                                   |                4 |             11 |
+|  USED_CLK                       |                                              | diaplay_pictureso/vga_driver_u0/x_cnt[10]_i_1_n_0 |                4 |             11 |
+|  display_/rgb_reg[11]_i_2_n_0   |                                              |                                                   |                6 |             12 |
+|  clk_BUFG                       | debouncer_btn_rotate_/drop_timer_reg[12]     | debouncer_sw_rst_/drop_timer0                     |                4 |             14 |
+|  USED_CLK                       |                                              |                                                   |                9 |             14 |
+|  clk_BUFG                       |                                              | debouncer_sw_rst_/counter[15]_i_1__6_n_0          |                4 |             15 |
+|  clk_BUFG                       |                                              | debouncer_sw_pause_/counter[15]_i_1__5_n_0        |                4 |             15 |
+|  clk_BUFG                       |                                              | debouncer_btn_left_/counter[15]_i_1__2_n_0        |                4 |             15 |
+|  clk_BUFG                       |                                              | debouncer_btn_drop_/counter[15]_i_1__0_n_0        |                4 |             15 |
+|  clk_BUFG                       |                                              | debouncer_btn_down_/counter[15]_i_1__4_n_0        |                4 |             15 |
+|  clk_BUFG                       |                                              | debouncer_btn_right_/counter[15]_i_1__3_n_0       |                4 |             15 |
+|  clk_BUFG                       |                                              | debouncer_btn_rotate_/counter[15]_i_1__1_n_0      |                4 |             15 |
+|  clk_BUFG                       |                                              | display_/counter_x[9]_i_1_n_0                     |                7 |             15 |
+|  clk_BUFG                       |                                              | score_display_/counter[17]_i_1__0_n_0             |                5 |             17 |
+|  USED_CLK                       |                                              | diaplay_pictureso/vga_driver_u0/x_cnt_reg[8]_0    |               14 |             32 |
+|  clk_BUFG                       | game_clock_/mode_reg[1]                      | game_clock_/counter[31]_i_1_n_0                   |               10 |             32 |
+|  clk_BUFG                       |                                              |                                                   |              219 |            252 |
++---------------------------------+----------------------------------------------+---------------------------------------------------+------------------+----------------+
+
+
